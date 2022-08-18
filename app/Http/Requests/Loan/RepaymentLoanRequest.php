@@ -15,7 +15,7 @@ class RepaymentLoanRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -26,7 +26,7 @@ class RepaymentLoanRequest extends FormRequest
     public function rules()
     {
         return [
-            'loan_id' => 'required|exists:loans',
+            'loan_id' => 'required|exists:loans,id',
             'amount_paid' => 'required'
         ];
     }

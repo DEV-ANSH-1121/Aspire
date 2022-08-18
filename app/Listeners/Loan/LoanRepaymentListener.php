@@ -5,6 +5,7 @@ namespace App\Listeners\Loan;
 use App\Events\Loan\LoanRepayment;
 use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Queue\InteractsWithQueue;
+use App\Models\Loan\Loan;
 
 class LoanRepaymentListener
 {

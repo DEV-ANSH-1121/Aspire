@@ -18,7 +18,7 @@ use App\Http\Controllers\Api\Loan\LoanController;
 */
 
 // All route names are prefixed with 'admin.'
-Route::group(['as' => 'admin.', 'prefix' => 'admin', 'middleware' => ['auth:sanctum']], function () {
+Route::group(['as' => 'admin.', 'prefix' => 'admin', 'middleware' => ['auth:sanctum','IsAdmin']], function () {
     Route::get('/getAllLoans', [AdminController::class, 'getAllLoans'])->name('getAllLoans');
     Route::post('/updateLoanStatus', [AdminController::class, 'updateLoanStatus'])->name('updateLoanStatus');
 });
